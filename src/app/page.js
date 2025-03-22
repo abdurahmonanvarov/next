@@ -13,7 +13,7 @@ function Page() {
       const timer = setTimeout(() => {
         setIsOpenmModal(true);
         localStorage.setItem("modalShown", "true"); // Belgilab qo‘yish
-      }, 10000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, []);
