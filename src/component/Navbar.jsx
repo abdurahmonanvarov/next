@@ -7,7 +7,7 @@ const Navbar = () => {
       <Link href={"/"}>Home</Link>
       <Link href={"/products"}>Products</Link>
       <Link href={"/card"}>Card</Link>
-      <Link href={"/contaxt"}>Contaxt</Link>
+      <Link href={"/contaxt"}>Contact</Link>
     </div>
   );
 };
