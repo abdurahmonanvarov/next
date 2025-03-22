@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 function Page() {
   const [formData, setFormData] = useState({
@@ -25,6 +26,7 @@ function Page() {
       email: "",
       message: "",
     });
+    toast.success("Malumot muvoffiqiyatli qoshildi :)");
   };
 
   return (
