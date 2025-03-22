@@ -20,11 +20,8 @@ function Page() {
   }, [id]);
 
   const handleAddToCart = () => {
-    // Oldin mavjud cart ni olish
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    // Yangisini qo'shish
     existingCart.push(product);
-    // LocalStorage ga saqlash
     localStorage.setItem("cart", JSON.stringify(existingCart));
     toast.success("Mahsulot savatchaga qo‘shildi!");
   };
@@ -47,3 +44,5 @@ function Page() {
 }
 
 export default Page;
+
+//salom
