@@ -7,12 +7,15 @@ function Page() {
   const [openModal, setIsOpenmModal] = useState(false);
 
   useEffect(() => {
-    // LocalStorage tekshirish — birinchi marta kirishda modalni ochish
-    const modalShown = localStorage.getItem("modalShown");
-    if (!modalShown) {
+    const modalData = JSON.parse(localStorage.getItem("modalShown"));
+
+    if (!modalData || Date.now() - modalData.timestamp > 24 * 60 * 60 * 1000) {
       const timer = setTimeout(() => {
         setIsOpenmModal(true);
-        localStorage.setItem("modalShown", "true"); // Belgilab qo‘yish
+        localStorage.setItem(
+          "modalShown",
+          JSON.stringify({ shown: true, timestamp: Date.now() })
+        );
       }, 5000);
       return () => clearTimeout(timer);
     }
