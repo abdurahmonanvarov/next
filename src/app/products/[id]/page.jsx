@@ -27,13 +27,13 @@ function Page() {
   };
 
   return (
-    <div className="text-center mt-10 w-[400px] mx-auto cursor-default">
+    <div className="mt-10 px-4 w-full max-w-md mx-auto text-center cursor-default">
       {product && (
         <>
           <ProductCard product={product} />
           <button
             onClick={handleAddToCart}
-            className="cursor-pointer w-full p-3.5 text-xl bg-blue-700 text-amber-50 mt-4"
+            className="cursor-pointer w-full p-4 text-lg bg-blue-700 text-white mt-4 rounded-xl hover:bg-blue-800 transition"
           >
             Add to cart
           </button>
@@ -44,5 +44,3 @@ function Page() {
 }
 
 export default Page;
-
-//salom
